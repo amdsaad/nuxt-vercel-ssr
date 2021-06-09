@@ -51,12 +51,6 @@ export default {
     '@nuxtjs/markdownit',
     '@nuxtjs/dotenv'
   ],
-  markdownit: {
-    preset: 'default',
-    linkify: true,
-    breaks: true
-  },
-
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
