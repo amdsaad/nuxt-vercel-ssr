@@ -1,8 +1,5 @@
 <template>
-  <div>
-    Hello World
-  </div>
-  <!-- <div class="homepage" v-if="homepage">
+  <div class="homepage" v-if="homepage">
     <section
       v-for="(section, indx) in homepage.section"
       :id="section.cssId"
@@ -42,7 +39,7 @@
         :blogdata="section.blog_item"
       />
     </section>
-  </div> -->
+  </div>
 </template>
 
 <script>
@@ -50,10 +47,13 @@ import axios from "axios";
 
 export default {
   async asyncData() {
+    let homepage = [];
     axios
       .get("https://strapi-greatlakesentry.herokuapp.com/homepage")
       .then(respons => {
-        console.log(respons);
+        homepage = respons;
+
+        return { homepage };
       })
       .catch(error => {
         console.log(error);
