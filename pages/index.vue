@@ -1,5 +1,8 @@
 <template>
-  <div class="homepage" v-if="homepage">
+  <div>
+    Hello World
+  </div>
+  <!-- <div class="homepage" v-if="homepage">
     <section
       v-for="(section, indx) in homepage.section"
       :id="section.cssId"
@@ -39,15 +42,15 @@
         :blogdata="section.blog_item"
       />
     </section>
-  </div>
+  </div> -->
 </template>
 
 <script>
 export default {
   async asyncData({ $strapi }) {
-    const homepage = await $strapi.find('homepage')
-    console.log(homepage)
-    return { homepage }
-  },
-}
+    const homepage = await $strapi.find("homepage");
+    console.log(homepage);
+    // return { homepage };
+  }
+};
 </script>
