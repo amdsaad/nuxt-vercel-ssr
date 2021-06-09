@@ -10,16 +10,16 @@
         <div class="navGroupitem nav2">
           <ul class="manuUL">
             <li>
-              <nuxt-link to="/about-us"> About Us </nuxt-link>
+              <nuxt-link to="#"> About Us </nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/dealers"> Dealers </nuxt-link>
+              <nuxt-link to="#"> Dealers </nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/faq"> FAQ </nuxt-link>
+              <nuxt-link to="#"> FAQ </nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/products"> Products </nuxt-link>
+              <nuxt-link to="#"> Products </nuxt-link>
               <ul class="submanu">
                 <li>
                   <nuxt-link to="#"> Starr Docks </nuxt-link>
@@ -63,7 +63,7 @@
               </ul>
             </li>
             <li>
-              <nuxt-link to="/contact-us"> Contact Us </nuxt-link>
+              <nuxt-link to="#"> Contact Us </nuxt-link>
             </li>
           </ul>
         </div>
@@ -216,10 +216,10 @@ export default {
     return {
       shownav3Links: false,
       showProductsmanuId: false,
-      showServicesMObile: false,
-    }
-  },
-}
+      showServicesMObile: false
+    };
+  }
+};
 </script>
 
 <style></style>
