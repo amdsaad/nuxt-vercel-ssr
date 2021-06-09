@@ -47,17 +47,11 @@ import axios from "axios";
 
 export default {
   async asyncData() {
-    let homepage = [];
-    axios
-      .get("https://strapi-greatlakesentry.herokuapp.com/homepage")
-      .then(respons => {
-        homepage = respons;
+    const homepageData = await axios.get(
+      "https://strapi-greatlakesentry.herokuapp.com/homepage"
+    );
 
-        return { homepage };
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    return { homepage: homepageData.data };
   }
 };
 </script>
