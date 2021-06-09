@@ -46,11 +46,15 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
-  async asyncData({ $strapi }) {
-    // const homepage = await $strapi.find("homepage");
-    // console.log(homepage);
-    // return { homepage };
+  async asyncData() {
+    const homepage = await axios.get(
+      "https://strapi-greatlakesentry.herokuapp.com/homepage"
+    );
+    console.log(homepage);
+    return { homepage };
   }
 };
 </script>
