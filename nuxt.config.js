@@ -48,7 +48,6 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/strapi',
-    '@nuxtjs/dotenv'
   ],
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
