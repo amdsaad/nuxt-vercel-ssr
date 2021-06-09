@@ -50,11 +50,14 @@ import axios from "axios";
 
 export default {
   async asyncData() {
-    const homepage = await axios.get(
-      "https://strapi-greatlakesentry.herokuapp.com/homepage"
-    );
-    console.log(homepage);
-    return { homepage };
+    axios
+      .get("https://strapi-greatlakesentry.herokuapp.com/homepage")
+      .then(respons => {
+        console.log(respons);
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 };
 </script>
