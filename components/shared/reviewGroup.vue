@@ -1,7 +1,7 @@
 <template>
   <div class="containerMn">
     <div class="reviewGroup">
-      <!-- <div v-html="$md.render(reviewgroupdata.richText)" /> -->
+      <div v-html="$md.render(reviewgroupdata.richText)" />
 
       <div class="reviewGroupItem">
         <a
