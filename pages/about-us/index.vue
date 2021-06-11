@@ -34,11 +34,21 @@
       <br />
       <p>(517) 639 7402</p>
     </section>
+    <extra-sections :extrSectionsdata="extrSections" />
   </div>
 </template>
 
 <script>
-export default {}
-</script>
+import axios from "axios";
 
-<style></style>
+export default {
+  async asyncData() {
+    const extrSections = await axios.get(
+      "https://strapi-greatlakesentry.herokuapp.com/shared"
+    );
+    console.log(extrSections.data);
+
+    return { extrSections: extrSections.data };
+  }
+};
+</script>

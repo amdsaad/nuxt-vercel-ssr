@@ -1,8 +1,8 @@
 <template>
   <VueSlickCarousel :arrows="true" :dots="true" v-bind="settings">
-    <div v-for="(item,indx) in sliderdata " :key="indx" class="banner_group">
+    <div v-for="(item, indx) in sliderdata" :key="indx" class="banner_group">
       <div class="banner_item">
-        <img :src="item.image.url" alt="img">
+        <img :src="item.image.url" alt="img" />
         <div class="banner_itemBox">
           <h1>{{ item.title }}</h1>
           <p>
@@ -14,11 +14,21 @@
         </div>
       </div>
     </div>
+    <template #prevArrow>
+      <div class="custom-arrow custom-arrow-left">
+        <i class="fas fa-arrow-circle-left"></i>
+      </div>
+    </template>
+    <template #nextArrow>
+      <div class="custom-arrow custom-arrow-right">
+        <i class="fas fa-arrow-circle-right"></i>
+      </div>
+    </template>
   </VueSlickCarousel>
 </template>
 
 <script>
-import VueSlickCarousel from 'vue-slick-carousel'
+import VueSlickCarousel from "vue-slick-carousel";
 
 export default {
   components: { VueSlickCarousel },
@@ -28,7 +38,7 @@ export default {
       required: true
     }
   },
-  data () {
+  data() {
     return {
       settings: {
         arrows: true,
@@ -37,17 +47,15 @@ export default {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        cssEase: 'linear'
+        cssEase: "linear"
       }
-    }
+    };
   },
-  mounted () {
-  }
-}
+  mounted() {}
+};
 </script>
 
 <style>
-
-@import url('vue-slick-carousel/dist/vue-slick-carousel.css');
-@import url('vue-slick-carousel/dist/vue-slick-carousel-theme.css');
+@import url("vue-slick-carousel/dist/vue-slick-carousel.css");
+@import url("vue-slick-carousel/dist/vue-slick-carousel-theme.css");
 </style>
