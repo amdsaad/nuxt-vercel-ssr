@@ -16,7 +16,7 @@
               <nuxt-link to="/dealers"> Dealers </nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/fax"> FAQ </nuxt-link>
+              <nuxt-link to="/faq"> FAQ </nuxt-link>
             </li>
             <li>
               <nuxt-link to="/products"> Products </nuxt-link>
