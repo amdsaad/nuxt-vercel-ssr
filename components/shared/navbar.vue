@@ -16,10 +16,10 @@
               <nuxt-link to="/dealers"> Dealers </nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/faq"> FAQ2 </nuxt-link>
+              <nuxt-link to="/faq"> FAQ </nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/products"> Products </nuxt-link>
+              <nuxt-link to="#"> Products </nuxt-link>
               <ul class="submanu">
                 <li>
                   <nuxt-link to="#"> Starr Docks </nuxt-link>
